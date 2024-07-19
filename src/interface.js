@@ -6,7 +6,7 @@ const content = document.querySelector('.content');
     export default function showProjects(projects,container){
         container.innerHTML = '';
 
-
+//commit on show proj
         for (let i = 0; i < projects.length; i++) {
             //Create container
             const newProject = document.createElement("div")
@@ -98,7 +98,7 @@ const content = document.querySelector('.content');
 
 
 
-    
+
 
 
     function showToDo(e){ //When toDo preview is clicked 
