@@ -1,8 +1,16 @@
+  @font-face {
+    font-family: queen;
+    src: url(./queen.ttf);
+  }
+  textarea {
+    resize: none;
+  }
 /*
   1. Use a more-intuitive box-sizing model.
 */
 *, *::before, *::after {
     box-sizing: border-box;
+    font-family: queen;
   }
   /*
     2. Remove default margin
@@ -44,3 +52,101 @@
   #root, #__next {
     isolation: isolate;
   }
+
+  body{
+    display: grid;
+    grid-template-rows: 100px 50px 1fr;
+    height: 100vh;
+  }
+  .todo-title{
+    font-size: 70px;
+    margin: 10px;
+    padding: 10px;
+    place-self: center;
+  }
+  .content {
+    background-color: rgb(255, 231, 235);
+    padding: 20px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+.project{
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  overflow-y: auto;
+  max-height: 500px;
+}
+.project-title{
+  font-size: 22px;
+  border-bottom:  3px solid rgb(0, 0, 0);
+  width: 100%;
+  padding: 10px;
+}
+.todo-preview{
+  box-shadow: 0 0 0 1px rgb(154, 152, 152);
+  max-height: 150px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+margin: 10px;
+padding: 10px;
+font-size: 20px;
+
+
+}
+
+.container-new-buttons{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.deleteButton, .deleteToDo{
+  color: red;
+  border-radius: 50%;
+  border-style: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 0.75em;
+  align-self: self-end;
+  margin: 10px;
+}
+

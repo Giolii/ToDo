@@ -1,0 +1,63 @@
+.container-modal{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(1px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    place-content: center;
+    place-items: center;
+}
+.to-do-modal-content{
+    color: antiquewhite;
+    font-weight: 800;
+    display: grid;
+    grid-template-columns: 100px 230px;
+    place-items: center;
+    gap: 10px;
+    width: 370px;
+    border: 1px solid #888;
+    padding: 20px;
+}
+#submitToDoButton {
+    width: 90px;
+    place-self: center;
+    margin: 20px;
+    grid-column: span 2;
+}
+ #toDoDescription{
+    height: 150px;
+}
+#submitProjectButton{
+    width: 150px;
+}
+.containerAddCheckList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.close-todo{
+    color: red;
+    font-size: 30px;
+    grid-column: span 2;
+    place-self: end ;
+    cursor: pointer;
+}
+.addToDoTopTitle{
+    grid-column: span 2;
+    margin-bottom: 20px;
+    place-content: center;
+}
+
+
+.checkListText{
+    text-align: start;
+    height: 150px;
+    width: 100px;
+    overflow-y:scroll;
+    border: 1px solid #888;
+    padding: 5px;
+}
+

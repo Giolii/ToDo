@@ -1,0 +1,46 @@
+.modal{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(1px);
+    text-align: center;
+    color: antiquewhite;
+}
+.modal-content {
+    padding: 20px;
+    background-color: transparent;
+    border: 1px solid #888;
+    width: 80%;
+    font-weight: 800;
+}
+.modal-content label{
+display: flex;
+gap: 10px;
+margin:  10px 0 10px 0;
+}
+
+.close{
+    color: red;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover,
+  .close:focus,
+  .close-todo:hover,
+  .close-todo:focus{
+  color: rgb(85, 1, 1);
+  text-decoration: none;
+}
+
+.modal-content,.to-do-modal-content {
+    position: relative;
+    animation-name: animatetop;
+    animation-duration: .5s
+  }
+  
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }

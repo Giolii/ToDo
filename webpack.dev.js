@@ -10,13 +10,13 @@ module.exports = merge(common, {
     static: path.join(__dirname, 'dist'),
     // static: './dist',
     hot: true,
-    watchFiles: ["src/*.html"],
+    watchFiles: ["src/*.html", "src/*.css","src/*.js"],
     // open:true,
     // compress:true,
-    // liveReload:true,
+    liveReload:false,
   },
   plugins: [
-    // new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   optimization: {
     runtimeChunk: 'single',

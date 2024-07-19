@@ -3,15 +3,57 @@
 <meta charset="UTF-8">
 <title></title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<body>
-    <header>
-        <h1>MY PROJECT</h1>
-        <nav class="nav-bar">
-            <button class="mod2">MOD2</button>
-            <button class="mod1">MOD1</button>
-        </nav>
-        <div id="content">
+<body>        
+        <div class="todo-title">To Do:</div>
+        <div class="container-new-buttons">
+                <button class="new-todo">New To Do</button>
+                <button class="new-project">New Project</button>
         </div>
-    </header>
+        <div class="content">
+        </div>
+
+         <!-- New project Modal -->
+<div id="projectModal" class="modal">
+        <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>New Project</h2>
+                <label for="projectTitle" >Enter the title of the new project:
+                <input type="text" id="projectTitle" autofocus autocomplete="off"></label>
+                <button id="submitProjectButton">Submit</button>
+        </div>
+</div>
+
+                <!-- New To Do Modal -->
+<div class="container-modal">
+        <div class="to-do-modal-content">
+                <span class="close-todo">&times;</span>
+                <h2 class='addToDoTopTitle'>New To Do:</h2>
+                <label for="toDoTitle" >Enter the title:</label>
+                <input type="text" id="toDoTitle" name="toDoTitle" autocomplete="off" required>
+                <label for="toDoDescription" >Description:</label>
+                <textarea type="text" id="toDoDescription" name="toDoDescription" autocomplete="off"></textarea>
+                <label for="toDoDate" >Due date:</label>
+                <input type="date" id="toDoDate" name="toDoDate" min="2024-01-01" max="2026-12-31" autocomplete="off"/>        
+                <label for="toDoPriority" >Priority:</label>
+                <select name="toDoPriority" id="toDoPriority">
+                        <option selected="selected"  value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                </select>
+                <label for="toDoCheckList" class="checkListText">Checklist:</label>
+                <div class="containerAddCheckList">
+                        <input type="text" id="toDoCheckList" name="toDoCheckList" autocomplete="off">
+                        <button id="addCheckListItem">Add Checklist item</button>
+                </div>                
+                <label for="toDoNote" >Note:</label>
+                <input type="text" id="toDoNote"  name="toDoNote" autocomplete="off">
+                <label for="toDoProject">Project:
+                </label>
+                <select name="" class="pickProject">select
+                </select>
+                <button id="submitToDoButton">Submit
+                </button>
+        </div>
+</div>
 </body>
 </html>
