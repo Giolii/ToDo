@@ -16,7 +16,6 @@
     export function returnProjects(){
         return projects;
     }
-
     //push todo to project
     export function moveToDo(toDo,project){//to review: didnt cancel from the previous project
         for (let i = 0; i < projects.length; i++) {
@@ -33,7 +32,6 @@
     export function deleteToDo(projectIndex,toDoIndex){//to review: didnt cancwel from the previous project
         projects[projectIndex].list.splice(toDoIndex, 1)
         }
-    
 
     export function displayToDo(project){
         for (let i = 0; i < projects.length; i++) {
@@ -42,7 +40,6 @@
             }
         }
     }
-
     // function editToDo(toDo){}
     
     export function defaultProject(){

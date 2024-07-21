@@ -52,6 +52,8 @@ place-content: center ;
     place-content: center;
     cursor: pointer;
     user-select: none;
+    background:transparent;
+    color: antiquewhite;
   }
 
   .toDo-title{
@@ -73,7 +75,7 @@ height: 100px;
     background-color: transparent;
     color: antiquewhite;
   }
-  .itemPriority,.addChecklistItem{
+  .itemPriority{
     background: transparent;
     color: antiquewhite;
     cursor: pointer;
@@ -91,6 +93,15 @@ height: 100px;
   .deleteChecklistItem{
     color: red;
 
+  }
+
+  .addChecklistItem{
+    background: transparent;
+    color: antiquewhite;
+    cursor: pointer;
+    width: 200px;
+    justify-self: center;
+    margin-bottom: 10px;
   }
 
   .oneListContainer{

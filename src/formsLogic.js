@@ -88,9 +88,6 @@ const closeModal = ()=> {
         checklist:checklist,
         note:note.value,
         project:project,
-        info: function(){
-          return `Title: ${title} Priority:${priority}`
-        }
       }
       resolve(input);
       closeModal()
@@ -102,7 +99,6 @@ const closeModal = ()=> {
       document.getElementById('toDoTitle').value = '';
       document.getElementById('toDoDescription').value = '';
       document.getElementById('toDoDate').value = '';
-      document.getElementById('toDoPriority').value = '';
       document.getElementById('toDoNote').value = '';
       checklist = [];
       document.querySelector('.checkListText').innerHTML = 'Checklist:';

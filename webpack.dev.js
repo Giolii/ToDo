@@ -9,7 +9,7 @@ module.exports = merge(common, {
   devServer: {
     static: path.join(__dirname, 'dist'),
     // static: './dist',
-    hot: true,
+    // hot: true,
     watchFiles: ["src/*.html", "src/*.css","src/*.js"],
     // open:true,
     // compress:true,

@@ -7,9 +7,5 @@ export default function createToDo(title,description,dueDate,priority,checklist,
         checklist:checklist,
         note:note,
         projectBelong:projectBelong,
-        info: function(){
-            return `Title: ${title} Priority:${priority}`
         }
     }
-}
-
