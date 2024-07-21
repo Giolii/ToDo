@@ -16,14 +16,7 @@
     export function returnProjects(){
         return projects;
     }
-    //push todo to project
-    export function moveToDo(toDo,project){//to review: didnt cancel from the previous project
-        for (let i = 0; i < projects.length; i++) {
-            if(projects[i].title === project){
-                projects[i].list.push(toDo)
-            }
-        }
-    }
+
     export function newMoveToDo(toDo,index){//to review: didnt cancel from the previous project
         projects[index].list.push(toDo)
 }
