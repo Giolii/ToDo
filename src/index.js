@@ -1,6 +1,5 @@
 import './style.css'; 
-import createToDo from './toDoFactory.js';
-import {createProject,returnProjects,newMoveToDo,defaultProject,moveToDo} from './manageProjects.js';
+import {createProject,returnProjects,newMoveToDo,defaultProject} from './manageProjects.js';
 import showProjects from './interface.js'
 import { formProject,formToDo } from './formsLogic.js';
 
