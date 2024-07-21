@@ -133,7 +133,7 @@ const content = document.querySelector('.content');
                     case 'checklist':
                     createChecklist(toDoPage, toDo);
                     break;
-                    case 'projectBelong':
+                    case 'project':
                     createProjectChoice(toDoPage, toDo,thisProject,thisToDo,container)
                     break;
                 default:
@@ -207,6 +207,7 @@ const content = document.querySelector('.content');
 
     function createChecklist(parent,projectTodo){
         const checklistContainer = document.createElement('div')
+        checklistContainer.classList.add('toDo-checklist')
         parent.appendChild(checklistContainer)
 
         const addChecklistItemButton = document.createElement('button')

@@ -104,30 +104,26 @@ height: 100px;
     margin-bottom: 10px;
   }
 
-  .oneListContainer{
-
+  .toDo-dueDate:empty::before, 
+  .toDo-note:empty::before,
+  .toDo-checklist:empty::before
+    {
+    color: grey;
   }
-
-  .toDo-description{
-
+  .toDo-dueDate[data-placeholder]:not([data-placeholder=""]):empty::before,
+  .toDo-note[data-placeholder]:not([data-placeholder=""]):empty::before,
+  .toDo-checklist[data-placeholder]:not([data-placeholder=""]):empty::before
+  {
+    content: attr(data-placeholder);
   }
-
-  .toDo-duedate{
-
+  .toDo-dueDate:empty::before 
+  {
+    content: 'Due date:';
   }
-
-  .toDo-priority{
-
+  .toDo-note:empty::before 
+  {
+    content: 'Note:';
   }
-  
-  .toDo-checklist{
-
-  }
-  
-  .toDo-note{
-
-  }
-  
-  .toDo-project{
-
+  .toDo-checklist:empty::before{
+    content:'Checklist:';
   }
