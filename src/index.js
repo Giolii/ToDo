@@ -23,8 +23,14 @@ newProjectButton.addEventListener('click',()=> {
 })
 
 document.addEventListener('DOMContentLoaded', ()=>{
+    for (let i = 0; i < localStorage.length; i++) {
+        console.log(localStorage.length)
+        returnProjects().push(JSON.parse(localStorage.getItem(`project ${i}`)))
+    }
     showProjects(returnProjects(),content)
 })
 
 
-if (module.hot) module.hot.accept()
+// if (module.hot) module.hot.accept()
+
+

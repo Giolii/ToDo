@@ -5,9 +5,12 @@ const content = document.querySelector('.content');
     //Empty container, Create projects, attach them to the container
     export default function showProjects(projects,container){
         container.innerHTML = '';
+        localStorage.clear();
     projects.forEach((project,projectIndex)=>{
         const projectElement = createProjectElement(project,projectIndex)
         container.appendChild(projectElement)
+        localStorage.setItem(`project ${projectIndex}`, JSON.stringify(project));
+        // console.table(JSON.parse(localStorage.getItem(`project ${projectIndex}`)))
     });
     }
 
@@ -247,6 +250,7 @@ const content = document.querySelector('.content');
             itemContainer.appendChild(itemDiv)
             container.appendChild(itemContainer)
         })
+        showProjects(returnProjects(),document.querySelector('.content'))
     }
 
     function makeToDoEditable(item,project,event){
